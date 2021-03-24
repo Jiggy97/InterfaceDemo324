@@ -15,23 +15,13 @@ public class MyInterfaceProg {
         System.out.println("Average balance: " + average(countries));
     }
 
-    private static double average(Country[] object) {
+    private static double average(Measurable[] object) {
         if (object.length == 0) { return 0; }
         double sum = 0;
-        for (Country obj : object){
-            sum = sum + obj.getArea();
+        for (Measurable obj : object){
+            sum = sum + obj.getMeasure();
         }
         return  sum / object.length;
-    }
-
-
-    private static double average(BankAccount[] accounts) {
-        if (accounts.length == 0) { return 0; }
-        double sum = 0;
-        for (BankAccount obj : accounts){
-            sum = sum + obj.getBalance();
-        }
-        return  sum / accounts.length;
     }
 }
 
